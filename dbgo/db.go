@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"Goods-Management-System-API/entity"
+	"Bihins-Management-System-API/entity"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"

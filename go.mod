@@ -1,4 +1,4 @@
-module Goods-Management-System-API
+module Bihins-Management-System-API
 
 go 1.19
 

@@ -1,8 +1,8 @@
 package main
 
 import (
-	db "Goods-Management-System-API/dbgo"
-	"Goods-Management-System-API/server"
+	db "Bihins-Management-System-API/dbgo"
+	"Bihins-Management-System-API/server"
 )
 
 func main() {

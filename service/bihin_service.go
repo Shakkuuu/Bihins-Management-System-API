@@ -3,8 +3,8 @@ package bihin
 import (
 	"github.com/gin-gonic/gin"
 
-	db "Goods-Management-System-API/dbgo"
-	"Goods-Management-System-API/entity"
+	db "Bihins-Management-System-API/dbgo"
+	"Bihins-Management-System-API/entity"
 )
 
 type Service struct{}

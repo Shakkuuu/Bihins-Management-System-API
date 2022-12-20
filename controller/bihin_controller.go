@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	bihin "Goods-Management-System-API/service"
+	bihin "Bihins-Management-System-API/service"
 )
 
 type Controller struct{}

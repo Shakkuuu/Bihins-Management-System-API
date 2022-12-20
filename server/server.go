@@ -3,7 +3,7 @@ package server
 import (
 	"github.com/gin-gonic/gin"
 
-	bihin "Goods-Management-System-API/controller"
+	bihin "Bihins-Management-System-API/controller"
 )
 
 // サーバー起動
