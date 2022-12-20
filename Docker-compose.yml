@@ -1,0 +1,28 @@
+version: '3'
+services:
+  go:
+    build: .
+    tty: true
+    volumes:
+      - .:/api
+    ports:
+      - 8080:8080
+    depends_on:
+      - "db"
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bihin
+      MYSQL_USER: usr
+      MYSQL_PASSWORD: 4nagawa4saido
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 3306:3306
+volumes:
+  mysql-data:
+    driver: local
