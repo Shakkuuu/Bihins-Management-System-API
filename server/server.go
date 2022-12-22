@@ -19,7 +19,8 @@ func router() *gin.Engine {
 	{
 		ctrl := bihin.Controller{}
 		u.GET("", ctrl.Index)
-		u.GET("/:id", ctrl.Show)
+		u.GET("/showid/:id", ctrl.Showid)
+		u.GET("/showdan/:dantaimei", ctrl.ShowDantaimei)
 		u.POST("", ctrl.Create)
 		u.PUT("/:id", ctrl.Update)
 		u.DELETE("/:id", ctrl.Delete)

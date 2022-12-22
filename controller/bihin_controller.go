@@ -36,11 +36,25 @@ func (pc Controller) Create(c *gin.Context) {
 	}
 }
 
-// Show action: GET /bihins/:id
-func (pc Controller) Show(c *gin.Context) {
+// Showid action: GET /bihins/:id
+func (pc Controller) Showid(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var s bihin.Service
 	p, err := s.GetByID(id)
+
+	if err != nil {
+		c.AbortWithStatus(404)
+		fmt.Println(err)
+	} else {
+		c.JSON(200, p)
+	}
+}
+
+// Showid action: GET /bihins/:dantaimei
+func (pc Controller) ShowDantaimei(c *gin.Context) {
+	dan := c.Params.ByName("dantaimei")
+	var s bihin.Service
+	p, err := s.GetByDantaimei(dan)
 
 	if err != nil {
 		c.AbortWithStatus(404)

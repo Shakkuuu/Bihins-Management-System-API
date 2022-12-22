@@ -51,6 +51,17 @@ func (s Service) GetByID(id string) (Bihin, error) {
 	return b, nil
 }
 
+func (s Service) GetByDantaimei(dantaimei string) (Bihin, error) {
+	db := db.GetDB()
+	var b Bihin
+
+	if err := db.Where("dantaimei LIKE ?", "%"+dantaimei+"%").Find(&b).Error; err != nil {
+		return b, err
+	}
+
+	return b, nil
+}
+
 // UpdateByID is update a Bihin
 func (s Service) UpdateByID(id string, c *gin.Context) (Bihin, error) {
 	db := db.GetDB()
