@@ -51,11 +51,11 @@ func (s Service) GetByID(id string) (Bihin, error) {
 	return b, nil
 }
 
-func (s Service) GetByDantaimei(dantaimei string) ([]Bihin, error) {
+func (s Service) GetByDantaimei(dantai string) ([]Bihin, error) {
 	db := db.GetDB()
 	var b []Bihin
 
-	if err := db.Where("dantaimei LIKE ?", "%"+dantaimei+"%").Find(&b).Error; err != nil {
+	if err := db.Where("dantai LIKE ?", "%"+dantai+"%").Find(&b).Error; err != nil {
 		return b, err
 	}
 
