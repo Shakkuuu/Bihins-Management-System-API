@@ -50,7 +50,7 @@ func (pc Controller) Showid(c *gin.Context) {
 	}
 }
 
-// Showid action: GET /bihins/:dantaimei
+// Showdan action: GET /bihins/:dantaimei
 func (pc Controller) ShowDantaimei(c *gin.Context) {
 	dan := c.Params.ByName("dantaimei")
 	var s bihin.Service

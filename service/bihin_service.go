@@ -51,6 +51,7 @@ func (s Service) GetByID(id string) (Bihin, error) {
 	return b, nil
 }
 
+// GetByDantaimei is get a Bihin
 func (s Service) GetByDantaimei(dantai string) ([]Bihin, error) {
 	db := db.GetDB()
 	var b []Bihin

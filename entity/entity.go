@@ -2,7 +2,7 @@ package entity
 
 import "time"
 
-// User is user models property
+// Bihin
 type Bihin struct {
 	ID          int       `json:"id"`
 	KnrId       string    `json:"knrid"`
